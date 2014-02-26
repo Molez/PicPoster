@@ -75,6 +75,8 @@ public class PicPosterActivity extends Activity {
 
 	public void searchPosts(View view) {
 		String searchTerm = this.searchPostsEditText.getText().toString();
+		this.controller.clearPicPost();
+		ElasticSearchOperations.searchPicPost(searchTerm, controller, PicPosterActivity.this);
 		
 		//TODO : perform search, update model, etc
 		

@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import ca.ualberta.cs.picposter.PicPosterActivity;
 import ca.ualberta.cs.picposter.R;
+import ca.ualberta.cs.picposter.model.PicPostModel;
 import ca.ualberta.cs.picposter.model.PicPosterModelList;
 
 /**
@@ -63,5 +64,14 @@ public class PicPosterController {
 		}
 		
 		this.model.addPicPost(pic, text, new Date());
+	}
+	
+	public void clearPicPost() {
+		model.clear();
+	}
+	
+	public void addSearchedPicPost(PicPostModel picPost) {
+		model.addSearchedPicPost(picPost);
+		
 	}
 }
